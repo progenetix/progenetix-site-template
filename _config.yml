@@ -85,4 +85,4 @@ safe: false
 navigation_max_items: 4 # number of shown links in current category
 emptyArray: []          # dummy element for array initialisation
 
-theme: Minima
+# theme: Minima
