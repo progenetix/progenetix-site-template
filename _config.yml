@@ -5,7 +5,7 @@ description: |
 keywords: Jekyll, websites, Github
 site_domain_name: baudisgroup.github.io/progenetix-site-template
 url: 'https://baudisgroup.github.io/progenetix-site-template'
-baseurl: ""
+baseurl: "/progenetix-site-template"
 site_parent_link: 'https://info.baudisgroup.org'
 github_organisation: baudisgroup
 
