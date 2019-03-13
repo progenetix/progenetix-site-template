@@ -3,8 +3,8 @@ tagline: 'A Template for Creating Jekyll-Based Websites'
 description: |
   SchemaBlocks is a cross-workstream project of the Global Alliance for Genomics & Health
 keywords: Jekyll, websites, Github
-site_domain_name: template.baudisgroup.org
-url: 'https://template.baudisgroup.org'
+site_domain_name: baudisgroup.github.io/progenetix-site-template
+url: 'https://baudisgroup.github.io/progenetix-site-template'
 baseurl: ""
 site_parent_link: 'https://info.baudisgroup.org'
 github_organisation: baudisgroup
