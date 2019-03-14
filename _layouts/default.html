@@ -69,20 +69,31 @@
   * first featured posts
   * those are subtracted from the nav_itemno count ...
 {%- endcomment -%}
+
         {%- for post in cat_posts -%}{%- if post.tags contains '.featured' -%}
-
+          {%- assign post_link = post.url | relative_url -%}
+          {%- assign post_label = post.title -%}
+          {%- if post.excerpt_link contains 'http://' or post.excerpt_link contains 'https://' -%}
+            {%- assign post_link = post.excerpt_link -%}
+            {%- assign post_label = post_label | append: ' &#8599;' -%}
+          {%- endif -%}
     <div class="sublink">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <a href="{{ post_link }}">{{ post_label }}</a>
     </div>
-
-        {%- assign nav_itemno = nav_itemno | minus: 1 -%}{%- endif -%}{%- endfor -%}
+          {%- assign nav_itemno = nav_itemno | minus: 1 -%}
+        {%- endif -%}{%- endfor -%}
         {%- for post in cat_posts limit: nav_itemno -%}{%- unless post.tags contains '.featured' or post.tags contains '.prepend' or post.tags contains '.append' -%}
 {%- comment -%}
   * others than the featured posts
 {%- endcomment -%}
-
-    <div class="sublink" >
-      <a href="{{ post.url  | relative_url }}">{{ post.title }}</a>
+          {%- assign post_link = post.url | relative_url -%}
+          {%- assign post_label = post.title -%}
+          {%- if post.excerpt_link contains 'http://' or post.excerpt_link contains 'https://' -%}
+            {%- assign post_link = post.excerpt_link -%}
+            {%- assign post_label = post_label | append: " &#8599;" -%}
+          {%- endif -%}
+    <div class="sublink">
+      <a href="{{ post_link }}">{{ post_label }}</a>
     </div>
  
         {%- endunless -%}{%- endfor -%}
