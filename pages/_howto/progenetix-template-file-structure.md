@@ -3,6 +3,7 @@ title:  "Directories and File Structure"
 permalink: /howto/templatefiles/
 layout: default
 date:   2019-03-14
+author: "@mbaudis"
 excerpt_link: https://baudisgroup.github.io/progenetix-site-template/howto/templatefiles/
 excerpt_separator: <!--more-->
 category:

@@ -3,6 +3,7 @@ title:  "Format of the YAML Header"
 permalink: "/howto/yamlheader/"
 layout: default
 date:   2019-03-14
+author: "@mbaudis"
 excerpt_link: "https://baudisgroup.github.io/progenetix-site-template/howto/yamlheader/"
 excerpt_separator: <!--more-->
 category:
