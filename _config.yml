@@ -5,12 +5,16 @@ description: |
 keywords: Jekyll, websites, Github
 site_domain_name: baudisgroup.github.io/progenetix-site-template
 url: 'https://baudisgroup.github.io/progenetix-site-template'
+
+# The baseurl parameter is an empty string if the site is represented at the root 
+# of a domain. For project domains on Github it corresponds to the project name.
 baseurl: "/progenetix-site-template"
+
+# the site_parent_link parameter is used e.g. for icon links.
 site_parent_link: 'https://info.baudisgroup.org'
 github_organisation: baudisgroup
 
 # instructions for processing specific directories
-
 include:        # usually only pages in / and /_posts are "seen" => processed
   - categories  # contains landing pages for each category
   - tags        # contains landing pages for each tag
@@ -18,8 +22,7 @@ include:        # usually only pages in / and /_posts are "seen" => processed
 # Collections are used to organise pages into logical groups; these do not need 
 # to have a relation to the "categories", though this is highly recommended
 # Collection directories reside in "/collections_dir/_(collection name)".
-# The "_posts" collection is created by default
-
+# The "_posts" collection is created by default.
 collections:
   people:
     output: true
@@ -34,22 +37,18 @@ collections_dir: pages  # optional; here, all collections are inside "/pages"
     
 # navigation blocks can be used to separate different categories and add e.g. 
 # external link block(s), in combination with a properly modified layout
-
-nav_cat_blocks: # comma-separated "label,type,label_visibility"
-  General: 'General,categories,hide'
+nav_cat_blocks:     # comma-separated "label,type,label_visibility"
+  general: 'General,categories,hide'
   related_sites: 'Related Sites,related_sites,show'
   github_projects: 'Github Projects,github_projects,show'
 
-General:
+# content of the different navigation blocks
+general:
   news: News
   people: Participants
   howto: 'Examples, Guides & FAQ'
   minutes: 'Meeting minutes'
   contact: Contacts
-
-categories_year_sorted:
-  - news
-  - minutes
 
 related_sites: 
   'Baudisgroup at UZH': 'http://info.baudisgroup.org'
@@ -61,9 +60,14 @@ github_projects:
   'progenetix': 'http://github.com/progenetix/'
   'SchemaBlocks': 'http://github.com/ga4gh-schemablocks/'
   'ELIXIR Beacon': 'http://github.com/beacon-project/'
- 
-# tag_cloud items
 
+# The categories_year_sorted parameter determines the selection of a 
+# time sorted, year labeled listing template for those categories.
+categories_year_sorted:
+  - news
+  - minutes
+
+# Only tags listed here are represented in the tag cloud.
 cloud_tags:
   - code
   - admins
@@ -75,14 +79,11 @@ cloud_tags:
   - Jekyll
 
 # additional Jekyll instructions
-
 plugins:
  - jekyll-seo-tag
 type: website
 show_downloads: true
 future: true
 safe: false
-navigation_max_items: 4 # number of shown links in current category
-emptyArray: []          # dummy element for array initialisation
-
-# theme: Minima
+navigation_max_items: 4 # displayed sidebar links in current category
+emptyArray: []          # dummy element for array instantiation
