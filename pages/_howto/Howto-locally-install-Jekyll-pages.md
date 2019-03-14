@@ -7,6 +7,9 @@ excerpt_link: https://baudisgroup.github.io/progenetix-site-template/howto/jekyl
 excerpt_separator: <!--more-->
 category:
   - howto
+tags:
+  - Jekyll
+  - documentation
 ---
 
 ## Local Jekyll based website generation

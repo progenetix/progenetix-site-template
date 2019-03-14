@@ -7,6 +7,10 @@ excerpt_link: https://baudisgroup.github.io/progenetix-site-template/howto/templ
 excerpt_separator: <!--more-->
 category:
   - howto
+tags:
+  - Jekyll
+  - Markdown
+  - documentation
 ---
 
 ## {{page.title}}

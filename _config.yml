@@ -77,6 +77,8 @@ cloud_tags:
   - press
   - times
   - Jekyll
+  - Markdown
+  - documentation
 
 # additional Jekyll instructions
 plugins:
