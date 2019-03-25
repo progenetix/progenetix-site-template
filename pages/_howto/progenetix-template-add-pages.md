@@ -22,7 +22,7 @@ This page is updated at the "excerpt_link" location linked in the header. If you
 
 ## {{page.title}}
 
-New pages are added to the website inside one of the "collections" directories in the [`/{{site.collections_dir}}`](https://{{github_link}}/{{site.collections_dir}}) directory. This can either be done by adding files locally or on Github (if hosted there).
+New pages are added to the website inside one of the "collections" directories in the [`/{{site.collections_dir}}`](https://{{site.github.repository_url}}/blob/master/{{site.collections_dir}}) directory. This can either be done by adding files locally or on Github (if hosted there).
 
 <!--more-->
 
