@@ -37,9 +37,9 @@ A simple practice is to
     - more header information can be found [here](./progenetix-template-yaml-headers.html)
     
     
-<a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;"><img src="{{ 'assets/img/icons8-edit-file-26.png' | relative_url }}" alt="Edit on Github..."  style="position: float: right;" /></a>
 #### Editing Pages on Github
 
+<a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;"><img src="{{ 'assets/img/icons8-edit-file-26.png' | relative_url }}" alt="Edit on Github..."  style="position: float: right;" /></a>
 If the website is hosted on Github, normal pages (i.e. not the listing pages for `tags` and `categories`) can be edited using Github's online editor. A direct link is provided through an "edit" icon which should be visible in the lower right corner of the page. Clicking this will open the page's source code in the Github editor; however, to change the code one still needs to click on the "edit" icon of the editor's menu bar.
 
 Saving changes follows standard Github protocol: Either directly pushing the changes (if you have access rights and this would be proper in the context of your project); or by creating a pull request.
