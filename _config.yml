@@ -73,6 +73,9 @@ categories_year_sorted:
   - news
   - minutes
 
+tags_year_sorted:
+  - press
+
 # Only tags listed here are represented in the tag cloud.
 cloud_tags:
   - code
@@ -80,11 +83,13 @@ cloud_tags:
   - contacts
   - contributors
   - developers
-  - press
-  - times
+  - documentation
+  - FAQ
   - Jekyll
   - Markdown
-  - documentation
+  - press
+  - times
+  - website
 
 # additional Jekyll instructions
 plugins:

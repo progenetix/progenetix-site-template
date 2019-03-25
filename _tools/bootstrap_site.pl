@@ -29,6 +29,11 @@ mkdir $type_path;
 foreach (@items) { copy($template, $type_path.'/'.$_.'.md') }
 foreach (@items) { print $type_path.'/'.$_.'.md'."\n" }
 
+$template       =   $base_path.'/_templates/_tags_year_sorted.md';
+@items          =   @{ $config->{tags_year_sorted} };
+foreach (@items) { copy($template, $type_path.'/'.$_.'.md') }
+foreach (@items) { print $type_path.'/'.$_.'.md'."\n" }
+
 #categories
 $template       =   $base_path.'/_templates/_categories.md';
 $type_path      =   $base_path.'/categories';
@@ -51,7 +56,7 @@ foreach (@items) { copy($template, $type_path.'/'.$_.'.md') }
 foreach (@items) { print $type_path.'/'.$_.'.md'."\n" }
 
 mkdir $base_path.'/'.$config->{collections_dir};
-foreach my $coll ((keys %{ $config->{collections} }), 'posts') {
+foreach my $coll (keys %{ $config->{collections} }) {
   mkdir $base_path.'/'.$config->{collections_dir}.'/_'.$coll;
   print $base_path.'/'.$config->{collections_dir}.'/_'.$coll."\n";
 }
