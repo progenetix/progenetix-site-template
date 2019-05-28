@@ -3,8 +3,16 @@
 @font-face { font-family: 'Noto Sans'; font-weight: 400; font-style: italic; src: url("../fonts/Noto-Sans-italic/Noto-Sans-italic.eot"); src: url("../fonts/Noto-Sans-italic/Noto-Sans-italic.eot?#iefix") format("embedded-opentype"), local("Noto Sans Italic"), local("Noto-Sans-italic"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2") format("woff2"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff") format("woff"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf") format("truetype"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans") format("svg"); }
 @font-face { font-family: 'Noto Sans'; font-weight: 700; font-style: italic; src: url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot"); src: url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot?#iefix") format("embedded-opentype"), local("Noto Sans Bold Italic"), local("Noto-Sans-700italic"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2") format("woff2"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff") format("woff"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf") format("truetype"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans") format("svg"); }
 
-body { background-color: #fff; padding: 15px; font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #727272; font-weight: 400; }
+/* 
+	This color is used for the "head band" and text links.
+	It is recommended to make adjustments in the site_style.css file.
+*/
 
+:root {
+  --site-color: rgb(96,96,96);
+}
+
+body { background-color: #fff; padding: 15px; font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #727272; font-weight: 400; }
 
 h1,h2,h3 { margin-top: 16px; margin-bottom: 12px; }
 h4,h5,h6 { margin-top: 12px; margin-bottom: 8px; }
@@ -37,9 +45,23 @@ header h5  {
   width: 100%;
   height: 25px;
   clear: both;
+  background-color: var(--site-color);
 }
 
-a { text-decoration: none; }
+#logo_topleft {
+  float: left;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+
+#logo_topright {
+  float: right;
+  margin-top: 10px;
+  margin-right: 12px;
+  width: 36px;
+}
+
+a { text-decoration: none; color: var(--site-color); }
 a:hover, a:focus {  text-decoration: underline ; }
 a small { font-size: 11px; margin-top: -0.3em; display: block; }
 
@@ -121,11 +143,6 @@ section div.excerpt:hover { box-shadow: 2px 2px 5px 0 #999; }
 
 /* Tag Cloud */
 
-.tagcloud {
-	text-align: center;
-	display: block;
-}
-
 .site-tag a {
   display: inline-block;
   color: #e63;
@@ -197,10 +214,6 @@ footer { width:24%; float: left; position: fixed; bottom: 20px; }
 }
 
 @media only screen and (max-width: 767px){
-	.container{ width:300px; }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px){
 	.container{ width:100% }
 	header, footer { text-align: center; margin: 0 auto; }
 	header h4 { padding: 10px; display: inline-block;}

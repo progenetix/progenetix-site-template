@@ -259,8 +259,9 @@
 {%- endcomment -%}
 
 {%- if page.date or page.author -%}
+
   <div class="pagestamp">
-  <hr />
+
   {%- if page.author -%}
     {%- for this_author in page.author -%}
       {%- if this_author contains "@" -%}
