@@ -9,13 +9,13 @@
 #logo_topleft {
   float: left;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 #logo_topright {
   float: right;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 12px;
   width: 36px;
 }
 
@@ -43,8 +43,4 @@ td ul {
 td li {
     margin-left: 0px;
     padding: 0px;
-}
-
-code {
-  font-size: 11px;
 }
