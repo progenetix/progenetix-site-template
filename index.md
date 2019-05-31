@@ -1,5 +1,5 @@
 ---
-title: "Baudisgroup Jekyll Website Template"
+title: "Progenetix Jekyll Website Template"
 layout: default
 date: 2018-12-20
 permalink: /index.html
@@ -13,7 +13,7 @@ tags:
 
 ## {{page.title}}
 
-Welcome to the Baudisgroup Jekyll Template.
+Welcome to the Progenetix Jekyll Template.
 
 This is a minimal repository which can be used to build static but "update on modification" websites using the Ruby based "Jekyll" framework.
 
