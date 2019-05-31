@@ -81,7 +81,7 @@ div {
 
 code, pre { font-family: Monaco, Lucida Console, Terminal, Consolas, Courier New, monospace; color: #33c; font-size: 12px; }
 
-pre { display: block; padding: 8px 15px; background: #f8f8f8; border-radius: 5px; border: 1px solid #e5e5e5; overflow-x: auto; }
+pre { display: block; padding: 8px 15px; white-space: pre-wrap; tab-size: 2; background: #f8f8f8; border-radius: 5px; border: 1px solid #e5e5e5; overflow-x: auto; }
 
 table { width: 100%; border-collapse: collapse; }
 
@@ -216,10 +216,13 @@ footer { width:24%; float: left; position: fixed; bottom: 20px; }
 @media only screen and (max-width: 767px){
 	.container{ width:100% }
 	header, footer { text-align: center; margin: 0 auto; }
-	header h4 { padding: 10px; display: inline-block;}
+	section h2 { text-align: center; }
+	section { padding-bottom: 8px; }
+	header h4 { padding: 4px 10px; display: inline-block;}
 	header h4.sublink { display: none; }
 	header h5 { display: none; }
 	header, section, footer { float: none; position: static; width: 100%; max-width: 100%; }
 	header, section, #catlinks, #sitelogo  { border-bottom: 1px solid var(--site-color); }
-	#tagcloud {padding: 8px;}
+	#tagcloud { padding: 8px; }
+	#catlinks { padding: 4px; }
 }
