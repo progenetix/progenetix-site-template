@@ -17,8 +17,9 @@ body { background-color: #fff; padding: 15px; font: 14px/1.5 "Noto Sans", "Helve
 h1,h2,h3 { margin-top: 16px; margin-bottom: 12px; }
 h4,h5,h6 { margin-top: 12px; margin-bottom: 8px; }
 
-p, ul, ol, table, pre, dl { margin: 0 0 20px; }
-
+p, ul, ol, table, pre, dl { margin: 0 0 1em; }
+li > ul { margin: 0; }
+li > ol { margin: 0; }
 h1, h2, h3 { line-height: 1.1; }
 
 h1 { color: #222; font-size: 28px; }
@@ -85,8 +86,9 @@ pre { display: block; padding: 8px 15px; white-space: pre-wrap; tab-size: 2; bac
 
 table { width: 100%; border-collapse: collapse; }
 
+tr:nth-child(even) { background-color: #f3f3f3; }
 th,td { text-align: left; padding: 5px 10px; border-bottom: 1px solid #e5e5e5; }
-th { color: #444; }
+th { color: #444; background-color: #f3f3f3; }
 td ul { padding: 0px; list-style: inside; }
 td li { margin-left: 0px; padding: 0px; }
 
@@ -133,7 +135,7 @@ section div.excerpt {
   border: 1px solid #e5e5e5;
 }
 
-section div.excerpt > a {
+section div.excerpt > a:first-of-type {
   display:block;
   text-decoration: none;
   color: #727272;
