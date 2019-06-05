@@ -9,23 +9,23 @@ description: |
   - info.baudisgroup.org
   - ...
 keywords: Jekyll, websites, Github
-site_domain_name: baudisgroup.github.io/progenetix-site-template
-url: 'https://baudisgroup.github.io/progenetix-site-template'
+site_domain_name: progenetix.github.io/progenetix-site-template
+url: 'https://progenetix.github.io/progenetix-site-template'
 
-# The baseurl parameter is an empty string if the site is represented at the root 
+# The baseurl parameter is an empty string if the site is represented at the root
 # of a domain. For project domains on Github it corresponds to the project name.
 baseurl: "/progenetix-site-template"
 
 # the site_parent_link parameter is used e.g. for icon links.
-site_parent_link: 'https://info.baudisgroup.org'
-github_organisation: baudisgroup
+site_parent_link: 'https://info.progenetix.org'
+github_organisation: progenetix
 
 # instructions for processing specific directories
 include:        # usually only pages in / and /_posts are "seen" => processed
   - categories  # contains landing pages for each category
   - tags        # contains landing pages for each tag
 
-# Collections are used to organise pages into logical groups; these do not need 
+# Collections are used to organise pages into logical groups; these do not need
 # to have a relation to the "categories", though this is highly recommended
 # Collection directories reside in "/collections_dir/_(collection name)".
 # The "_posts" collection is created by default.
@@ -40,8 +40,8 @@ collections:
     output: true
     permalink: /minutes/:path/
 collections_dir: pages  # optional; here, all collections are inside "/pages"
-    
-# navigation blocks can be used to separate different categories and add e.g. 
+
+# navigation blocks can be used to separate different categories and add e.g.
 # external link block(s), in combination with a properly modified layout
 nav_cat_blocks:     # comma-separated "label,type,label_visibility"
   general: 'General,categories,hide'
@@ -56,7 +56,7 @@ general:
   minutes: 'Meeting minutes'
   contact: Contacts
 
-related_sites: 
+related_sites:
   'Baudisgroup at UZH': 'http://info.baudisgroup.org'
   'Progenetix': 'http://progenetix.org'
   'SchemaBlocks': 'http://schemablocks.org'
@@ -67,7 +67,7 @@ github_projects:
   'SchemaBlocks': 'http://github.com/ga4gh-schemablocks/'
   'ELIXIR Beacon': 'http://github.com/beacon-project/'
 
-# The categories_year_sorted parameter determines the selection of a 
+# The categories_year_sorted parameter determines the selection of a
 # time sorted, year labeled listing template for those categories.
 categories_year_sorted:
   - news
