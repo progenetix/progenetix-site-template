@@ -24,9 +24,6 @@ layout: default
       {% assign tag_lower = tag | downcase %}
       {% if tag_lower == page_tag %}
 <div class="excerpt">
-        {% if post_day > today %}
-  <h3 style="color: red">{{ post.date | date: "%Y-%m-%d" }}</h3>
-        {% endif %}
 <a href="{{ excerpt_link }}">{{ post.excerpt }}</a>
   <p class="footnote">
       {%- if post.author -%}{{ post.author | join: " | " }}&nbsp;{%- endif -%}
