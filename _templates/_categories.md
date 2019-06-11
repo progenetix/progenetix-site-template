@@ -97,7 +97,7 @@ layout: default
     <a href="{{ excerpt_link }}">more ...</a>
   </p>
 </div>
-  {% endunless %}
+  {% endif %}
 {%- endfor -%}
 
 {%- comment -%}
