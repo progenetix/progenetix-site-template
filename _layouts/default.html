@@ -13,7 +13,7 @@
 	{%- if static_file.path contains '/preload/' -%}
 		{% if static_file.extname contains 'css' %}
   <link rel="stylesheet" href="{{ static_file.path | relative_url }}">
-		{%- elsif static_file.extname contains 'js' -%}
+		{% elsif static_file.extname contains 'js' %}
 	<script src="{{ static_file.path | relative_url }}"></script>
 		{%- endif -%}
 	{%- endif -%}
