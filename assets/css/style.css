@@ -135,6 +135,10 @@ section div.excerpt {
   border: 1px solid #e5e5e5;
 }
 
+section div.stale {
+  color: #999;
+}
+
 section div.excerpt > a:first-of-type {
   display:block;
   text-decoration: none;
