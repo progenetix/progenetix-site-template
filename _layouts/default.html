@@ -7,9 +7,17 @@
   <meta name="viewport" content="width=device-width">
 {%- for static_file in site.static_files -%}{% if static_file.path contains 'site-specific/favicon.ico' %}
   <link rel="shortcut icon" href="{{ 'assets' | relative_url }}/img/site-specific/favicon.ico" type="image/x-icon" />
-{% endif-%}{%- endfor -%}
+{% endif %}{%- endfor -%}
   <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ 'assets/css/site_style.css' | relative_url }}">
+{%- for static_file in site.static_files -%}
+	{%- if static_file.path contains '/preload/' -%}
+		{% if static_file.extname contains 'css' %}
+  <link rel="stylesheet" href="{{ static_file.path | relative_url }}">
+		{%- elsif static_file.extname contains 'js' -%}
+	<script src="{{ static_file.path | relative_url }}"></script>
+		{%- endif -%}
+	{%- endif -%}
+{%- endfor -%}
 
 </head>
 
@@ -334,7 +342,6 @@
   <button style="position: absolute; bottom: 15px; right: 15px;" class="btn" data-clipboard-text="open {{site.source_path}}/{{ page.path }}">
     <img src="{{ 'assets/img/clippy.svg' | relative_url }}" width="15px" alt="Copy local path to clipboard for pasting into terminal - only works for site editors...">
   </button>
-<script src="{{ 'assets/js/clipboard.min.js' | relative_url }}"></script>
 <script>
   var clipboard = new ClipboardJS('.btn');
   clipboard.on('success', function(e) {
