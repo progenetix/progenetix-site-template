@@ -23,6 +23,7 @@ A typical application here would be to have the root directory as a Github proje
 * [ELIXIR Beacon](http://beacon-project.io)
 * [GA4GH Metadata](http://ga4gh-metadata.github.io)
 * [GA4GH Discovery](http://ga4gh-discovery.github.io)
+* [ELIXIR Cloud and AAI](https://elixir-europe.github.io/cloud/)
 
 Alternatively, the site can be build locally (requiring some Ruby gems etc.), for either testing purposes or to serve the compiled site from your own hosting space. Examples here are our sites:
 
