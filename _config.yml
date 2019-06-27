@@ -65,7 +65,7 @@ github_projects:
   'baudisgroup': 'http://github.com/baudisgroup/'
   'progenetix': 'http://github.com/progenetix/'
   'SchemaBlocks': 'http://github.com/ga4gh-schemablocks/'
-  'ELIXIR Beacon': 'http://github.com/beacon-project/'
+  'ELIXIR Beacon': 'http://github.com/ga4gh-beacon/'
 
 # The categories_year_sorted parameter determines the selection of a
 # time sorted, year labeled listing template for those categories.
