@@ -59,7 +59,7 @@ tags:
 ---
 ```
 
-#### Standard Parameters
+### Standard Parameters
 
 * `title`
     - the title of the page
@@ -87,7 +87,8 @@ tags:
     - the name of a PDF (without path!) somewhere in "assets", which will be auto-linked at the bottom of the page (like the _www_ links above)
 * `categories`
     - usually *one* (or two) category the page belongs to
-    - should be one of the categories in `_config.yml` (otherwise not much use ...); there, _categories_ are only implicitely defined - as keys in the `nav_cat_blocks` of the type "categories" (i.e. below keys of the root attribute "general"):
+    - should be one of the categories in `_config.yml` (otherwise not much use ...); there, _categories_ are only implicitely defined - as keys in the `nav_cat_blocks` of the type "categories" (i.e. below keys of the root attribute "general"):  
+
 ```
 nav_cat_blocks:     # comma-separated "label,type,label_visibility"
   general: 'General,categories,hide'
@@ -102,7 +103,8 @@ general:
 ```
 * `tags`
     - usually *several* tags associated with the content of the page
-    - should be from the tags in `_config.yml` (otherwise not much use ...):
+    - should be from the tags in `_config.yml` (otherwise not much use ...):   
+
 ```
 # Only tags listed here are represented in the tag cloud.
 cloud_tags:
