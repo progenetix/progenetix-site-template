@@ -9,7 +9,6 @@ category:
   - news
 tags:
   - news
-  - documentation
 ---
 
 ## {{ page.title }}
