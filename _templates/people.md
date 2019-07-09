@@ -6,9 +6,9 @@ excerpt_separator: <!--more-->
 excerpt_link: # an optional link to different page when clicking the excerpt
 www_link: # a simple web address related to the post, e.g. https://www.ga4gh.org
 www_links_formatted:  # one or multiple complete links
-#  - '<a href="https://www.biorxiv.org" target="_blank">[biorXiv]</a>'
-image_file: 'Ion_Tichy.png'
-category:
+  - '<a href="https://lem.pl" target="_blank">[Wikipedia]</a>'
+image_file: 'Stanislaw_Lem.jpg'
+categories:
   - people
 tags: # please delete unneeded options
   - contacts
@@ -31,11 +31,10 @@ Arkturius Space University
 * email [itichy@cc.arsu.arkturius](mailto:itichy@cc.arkturius)  
 * web [ARSU](https://sww.arsu.arkturius)  
 
+
+Ion Tichy is a frequently recurring character in the works of Stanisław Lem, one of the most prescient - and funny - Science Fiction writers and futurologists of the 20th century.
+
 <!--more-->
 
-Ion Tichy is a character in the works of Stanislaw Lem.
-
-
-
-
+Now, obviously, this is not a picture of Ion Tichy, but of Stanisław Lem himself (Source: [Wikipedia](https://commons.wikimedia.org/wiki/File:Stanislaw_Lem_2.jpg).
 
