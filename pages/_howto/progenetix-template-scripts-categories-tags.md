@@ -38,7 +38,7 @@ The script is just a helper for
 * setting up the site
 * updating the site after `_config.yml` or template changes
 
-It loads the `_config.yml` file to determine which tags, categories are needed and creates the appropriate listing pages from the templates (see above and the [header page](../yamlheader/)).
+It loads the `_config.yml` file to determine which tags, categories are needed and creates the appropriate listing pages from the templates (see above and the [header page](../yamlheader/)). The script also creates the `collections` directories if missing (e.g. `/pages/_doc/` from the `collections.doc` entry in `_config.yml`.
 
 As listed above, two types of templates exist - one with alphabetic sorting (standard), and one for time sorted tags and categories. Alphabetical sorting is standard; the time sorted can be selected in the configuration file:
 
