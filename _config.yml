@@ -75,7 +75,7 @@ github_projects:
 categories_year_sorted:
   - news
   - minutes
-
+# As above, for tags:
 tags_year_sorted:
   - press
 
