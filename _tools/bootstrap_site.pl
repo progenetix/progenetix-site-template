@@ -15,7 +15,7 @@ binmode STDOUT, ":utf8";
 my %args        =   @ARGV;
 
 $args{-master}	||=	'progenetix/progenetix-site-template';
-$args{-prompt}	||=	'y';
+$args{-update}	||=	'n';
 
 my @cat_blocks  =   qw(General Products);
 
@@ -30,14 +30,15 @@ print $base_path."\n";
 # gets overwritten
 if ($base_path !~ /$args{-master}/) {
 
-	my $base_url	=		'https://raw.githubusercontent.com/'.$args{-master}.'/master';
-	my @master_f	=		('_layouts/default.html', 'assets/css/style.css');
-	
-	foreach (@master_f) {
-		my $url			=		$base_url.'/'.$_;
-		my $file		=		$base_path.'/'.$_;
-		if ($args{-prompt} =~ /y/i) {
-			print <<END;
+		my $base_url	=		'https://raw.githubusercontent.com/'.$args{-master}.'/master';
+		my @master_f	=		('_layouts/default.html', 'assets/css/style.css');
+
+		if ($args{-update} =~ /y/i)	 {}
+		foreach (@master_f) {
+			my $url			=		$base_url.'/'.$_;
+			my $file		=		$base_path.'/'.$_;
+			if ($args{-prompt} =~ /y/i) {
+				print <<END;
 
 ################################################################################
 
@@ -45,18 +46,18 @@ updating $_ from $args{-master}
 
 $url => $file
 
-Please hit ENTER to proceed, or type "n" to skip:	
+Please hit ENTER to proceed, or type "n" to skip:
 END
-			my $resp = <STDIN>;
-			if ($resp =~ /^n/i) {
-				print "skipped $_\n\n";
-				next;
+				my $resp = <STDIN>;
+				if ($resp =~ /^n/i) {
+					print "skipped $_\n\n";
+					next;
+				}
 			}
-		}
-		getstore($url, $file);
-		print "updated $_\n\n";
+			getstore($url, $file);
+			print "updated $_\n\n";
 
-}}
+}}}
 
 my @items;
 my $template    =   $base_path.'/_templates/_tags.md';
@@ -101,4 +102,3 @@ foreach my $coll (keys %{ $config->{collections} }) {
   mkdir $base_path.'/'.$config->{collections_dir}.'/_'.$coll;
   print $base_path.'/'.$config->{collections_dir}.'/_'.$coll."\n";
 }
-

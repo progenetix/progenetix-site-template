@@ -30,6 +30,9 @@ include:        # usually only pages in / and /_posts are "seen" => processed
 # Collection directories reside in "/collections_dir/_(collection name)".
 # The "_posts" collection is created by default.
 collections:
+  doc:
+    output: true
+    permalink: /doc/:path/
   people:
     output: true
     permalink: /people/:path/
