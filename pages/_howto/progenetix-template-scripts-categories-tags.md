@@ -22,23 +22,33 @@ This page is updated at the "excerpt_link" location linked in the header. If you
 
 ## {{page.title}}
 
-New pages are added to the website inside one of the "collections" directories in the [`/{{site.collections_dir}}`]({{site.github.repository_url}}/blob/master/{{site.collections_dir}}) directory. This can either be done by adding files locally or on Github (if hosted there).
+The `tags` and `categories` provided in the [pages' YAML headers](../yamlheader/) allow accessing the pages through the  listing pages (for the respective tag, category). Templates for those listing pages are provided in the source code `/_templates` directory.
 
 <!--more-->
 
-A simple practice is to 
+* `_categories.md` and `_categories_year_sorted.md`
+* `_tags` and `_tags_year_sorted.md`
 
-* navigate to an existing page of a related topic
-* duplicate the file
-* change the name
-    - in case of pages in `/{{site.collections_dir}}/_posts/`, this has to include starting the file name with an ISO date and minus sign, e.g. `2019-03-25-good-news.md`
-* edit the page's YAML header
-    - date, again; will override date in file name - not strictly needed if correct date there, but good practice for all pages (influences sorting etc.)
-    - more header information can be found [here](./progenetix-template-yaml-headers.html)
-    
-    
-#### Editing Pages on Github
+Those templates can be copied in the source `/tags` or `/categories` directories, and be renamed to reflect the tag or category they should serve (e.g. "news.md").
 
-If the website is hosted on Github, normal pages (i.e. not the listing pages for `tags` and `categories`) can be edited using Github's online editor. A direct link is provided through an "edit" icon which should be visible in the lower right corner of the page. <img align="right" style="margin: 10px;" src="{{ 'assets/img/icons8-edit-file-26.png' | relative_url }}" /> Clicking this will open the page's source code in the Github editor; however, to change the code one still needs to click on the "edit" icon of the editor's menu bar.
+#### "bootstrap_site.pl" helper script
 
-Saving changes follows standard Github protocol: Either directly pushing the changes (if you have access rights and this would be proper in the context of your project); or by creating a pull request.
+The script is just a helper for
+
+* setting up the site
+* updating the site after `_config.yml` or template changes
+
+It loads the `_config.yml` file to determine which tags, categories are needed and creates the appropriate listing pages from the templates (see above and the [header page](../yamlheader/)).
+
+As listed above, two types of templates exist - one with alphabetic sorting (standard), and one for time sorted tags and categories. Alphabetical sorting is standard; the time sorted can be selected in the configuration file:
+
+```
+# The categories_year_sorted parameter determines the selection of a
+# time sorted, year labeled listing template for those categories.
+categories_year_sorted:
+  - news
+  - minutes
+# As above, for tags:
+tags_year_sorted:
+  - press
+```
