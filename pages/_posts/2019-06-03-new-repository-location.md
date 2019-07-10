@@ -5,7 +5,7 @@ date: 2019-06-03
 author: ["@mbaudis"]
 excerpt_separator: <!--more-->
 www_link: 
-category:
+categories:
   - news
 tags:
   - news

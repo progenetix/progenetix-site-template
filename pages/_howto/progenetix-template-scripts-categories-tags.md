@@ -26,8 +26,8 @@ The `tags` and `categories` provided in the [pages' YAML headers](../yamlheader/
 
 <!--more-->
 
-* `_categories.md` and `_categories_year_sorted.md`
-* `_tags` and `_tags_year_sorted.md`
+* `_categories.md` and `_categories-date-sorted.md`
+* `_tags` and `_tags-date-sorted.md`
 
 Those templates can be copied in the source `/tags` or `/categories` directories, and be renamed to reflect the tag or category they should serve (e.g. "news.md").
 
@@ -43,12 +43,12 @@ It loads the `_config.yml` file to determine which tags, categories are needed a
 As listed above, two types of templates exist - one with alphabetic sorting (standard), and one for time sorted tags and categories. Alphabetical sorting is standard; the time sorted can be selected in the configuration file:
 
 ```
-# The categories_year_sorted parameter determines the selection of a
+# The categories-date-sorted parameter determines the selection of a
 # time sorted, year labeled listing template for those categories.
-categories_year_sorted:
+categories-date-sorted:
   - news
   - minutes
 # As above, for tags:
-tags_year_sorted:
+tags-date-sorted:
   - press
 ```

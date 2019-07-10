@@ -2,6 +2,7 @@
 title: "Ion Tichy, ST"
 layout: default
 date: 1967-11-11
+author: # quoted "@Github" shortname recommended
 excerpt_separator: <!--more-->
 excerpt_link: # an optional link to different page when clicking the excerpt
 www_link: # a simple web address related to the post, e.g. https://www.ga4gh.org

@@ -3,10 +3,17 @@ layout: default
 ---
 
 {%- assign this_name = page.name | split: "." -%}
-{%- assign this_category = this_name[0] -%}
+{%- assign this_category = this_name[0] | replace: '-alpha-sorted', '' -%}
 {%- assign this_pagetitle = this_category  | capitalize | replace: '_', ' ' -%}
 
-<h2 class="page_title">{{ this_pagetitle }}</h2>
+<div style="width: 100%;">
+	<div style="width: 10%; padding-top: 10px; float: right; font-size: 0.8em; text-align: right;">
+		<a href="{{this_category}}-date-sorted.html">[date &darr;]</a>
+	</div>
+	<div style="width: 80%; float: left; clear: none;">
+		<h2 class="page_title">{{ this_pagetitle }}</h2>
+	</div>
+</div>
 
 {%- comment -%}
   * collecting the pages
@@ -63,7 +70,7 @@ layout: default
 {%- endcomment -%}
 
 {%- for post in cat_posts -%}
-  {% unless post.tags contains '.featured' or post.tags contains '.prepend' or post.tags contains '.append' or post.tags contains '.stale' %} 
+  {% unless post.tags contains '.featured' or post.tags contains '.prepend' or post.tags contains '.append' %} 
     {%- assign excerpt_link = post.url | relative_url -%}
     {%- if post.excerpt_link contains '/' -%}
       {%- assign excerpt_link = post.excerpt_link -%}
@@ -79,25 +86,6 @@ layout: default
   </p>
 </div>
   {% endunless %}
-{%- endfor -%}
-
-{%- for post in cat_posts -%}
-  {% if post.tags contains '.stale' %} 
-    {%- assign excerpt_link = post.url | relative_url -%}
-    {%- if post.excerpt_link contains '/' -%}
-      {%- assign excerpt_link = post.excerpt_link -%}
-    {%- endif -%}
-<div class="excerpt stale">
-<a href="{{ excerpt_link }}">
-{{ post.title }} (stale ...)
-</a>
-  <p class="footnote">
-    {%- if post.author -%}{{ post.author | join: " | " }}&nbsp;{%- endif -%}
-    {% if post.date %}{{ post.date | date: "%Y-%m-%d" }}: {% endif %}
-    <a href="{{ excerpt_link }}">more ...</a>
-  </p>
-</div>
-  {% endif %}
 {%- endfor -%}
 
 {%- comment -%}
