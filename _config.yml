@@ -13,7 +13,11 @@ site_domain_name: progenetix.github.io/progenetix-site-template
 url: 'https://progenetix.github.io/progenetix-site-template'
 
 # The baseurl parameter is an empty string if the site is represented at the root
-# of a domain. For project domains on Github it corresponds to the project name.
+# of a domain:
+# * For project domains on Github it corresponds to the project name.
+# * If running the server locally for testing purposes, one has to provide an 
+#   empty string (--baseurl "") as command line parameter if a different value 
+#   exists here.
 baseurl: "/progenetix-site-template"
 
 # the site_parent_link parameter is used e.g. for icon links.
