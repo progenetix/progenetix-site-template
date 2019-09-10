@@ -6,11 +6,13 @@ layout: default
 {%- assign this_category = this_name[0] | replace: '-alpha-sorted', '' -%}
 {%- assign this_pagetitle = this_category  | capitalize | replace: '_', ' ' -%}
 
-<div style="width: 100%;">
-	<div style="width: 10%; padding-top: 10px; float: right; font-size: 0.8em; text-align: right;">
-		<a href="{{this_category}}-date-sorted.html">[date &darr;]</a>
+<div id="listpage_headline_wrapper">
+	<div id="listpage_sortmarker">
+		<a href="{{this_category}}-date-sorted.html">[date&nbsp;&darr;]</a>
+ 		<a href="{{this_category}}-date-sorted-reverse.html">[date&nbsp;&uarr;]</a>
+		<a href="{{this_category}}-alpha-sorted-reverse.html">[Z&nbsp;&rarr;&nbsp;A]</a>
 	</div>
-	<div style="width: 80%; float: left; clear: none;">
+	<div id="listpage_headline">
 		<h2 class="page_title">{{ this_pagetitle }}</h2>
 	</div>
 </div>

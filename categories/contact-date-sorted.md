@@ -6,11 +6,13 @@ layout: default
 {%- assign this_category = this_name[0] | replace: '-date-sorted', '' -%}
 {%- assign this_pagetitle = this_category  | capitalize | replace: '_', ' ' -%}
 
-<div style="width: 100%;">
-	<div style="width: 10%; padding-top: 10px; float: right; font-size: 0.8em; text-align: right;">
-		<a href="{{this_category}}-alpha-sorted.html">[A &rarr; Z]</a>
+<div id="listpage_headline_wrapper">
+	<div id="listpage_sortmarker">
+ 		<a href="{{this_category}}-date-sorted-reverse.html">[date&nbsp;&uarr;]</a>
+		<a href="{{this_category}}-alpha-sorted.html">[A&nbsp;&rarr;&nbsp;Z]</a>
+		<a href="{{this_category}}-alpha-sorted-reverse.html">[Z&nbsp;&rarr;&nbsp;A]</a>
 	</div>
-	<div style="width: 80%; float: left; clear: none;">
+	<div id="listpage_headline">
 		<h2 class="page_title">{{ this_pagetitle }}</h2>
 	</div>
 </div>
@@ -61,9 +63,9 @@ layout: default
       {%- assign post_year = 'Upcoming' -%}
     {%- endif %}
     {%- if current_year != post_year -%}
-      {%- assign current_year = post_year -%}
+      {% assign current_year = post_year %}
 <h2 id="y{{post.date | date: "%Y"}}" style="margin-top: 20px;">{{ current_year }}</h2>
-    {%- endif -%}
+    {% endif %}
 <div class="excerpt">
     {%- if post_day > today -%}
   <h3 style="color: red">{{ post.date | date: "%Y-%m-%d" }}</h3>
