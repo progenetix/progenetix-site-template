@@ -7,6 +7,7 @@ description: |
   - geagh-discovery.github.io
   - info.progenetix.org
   - info.baudisgroup.org
+  - compbiozurich.org
   - ...
 keywords: Jekyll, websites, Github
 site_domain_name: progenetix.github.io/progenetix-site-template
@@ -16,8 +17,8 @@ url: 'https://progenetix.github.io/progenetix-site-template'
 # of a domain:
 # * For project domains on Github it corresponds to the project name.
 # * If running the server locally for testing purposes, one has to provide an 
-#   empty string (--baseurl "") as command line parameter if a different value 
-#   exists here.
+#   empty string (--baseurl "") as command line parameter, if a different value 
+#   is being provided here.
 baseurl: "/progenetix-site-template"
 
 # the site_parent_link parameter is used e.g. for icon links.
@@ -40,12 +41,6 @@ collections:
   people:
     output: true
     permalink: /people/:path/
-  howto:
-    output: true
-    permalink: /howto/:path/
-  minutes:
-    output: true
-    permalink: /minutes/:path/
 collections_dir: pages  # optional; here, all collections are inside "/pages"
 
 # navigation blocks can be used to separate different categories and add e.g.
@@ -56,6 +51,10 @@ nav_cat_blocks:     # comma-separated "label,type,label_visibility"
   github_projects: 'Github Projects,github_projects,show'
 
 # content of the different navigation blocks
+
+# The `general` block is of type "categories" (defined above in `nav_cat_blocks`); i.e. 
+# the attributes there reflect Jekyll site `categories` as specified in the pages' YAML 
+# headers.
 general:
   news: News
   people: Participants
@@ -83,7 +82,7 @@ categories-date-sorted:
 tags-date-sorted:
   - press
 
-# Only tags listed here are represented in the tag cloud.
+# Only tags listed here will be considered for the tag cloud.
 cloud_tags:
   - code
   - admins
