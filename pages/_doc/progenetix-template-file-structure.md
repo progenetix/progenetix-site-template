@@ -37,7 +37,7 @@ Generally, "_underscore" directories contain specific support files are not eval
 * `_layouts`
     - directory for one or more layout pages which are used as templates when processing the Markdown or HTML files
     - the corresponding layout is selected in the page's YAML header
-    - layout contain a mix of HTML and _Liquid_ instructions
+    - layout contain a mix of HTML and [Liquid](https://help.shopify.com/en/themes/liquid) instructions
     - the Progenetix template project uses a single `default.html` template file
 * `_site`
     - a directory generated when locally serving the site; can be ignored (except for debugging)
