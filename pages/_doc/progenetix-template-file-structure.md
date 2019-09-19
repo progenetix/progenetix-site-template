@@ -30,13 +30,15 @@ Generally, "_underscore" directories contain specific support files are not eval
 
 * `_data`
     - special directory for e.g. JSON data files, if needed (see [Jekyll](https://jekyllrb.com) documentation)
+    - optional
 * `_includes`
     - special directory for page elements etc., if needed (see [Jekyll](https://jekyllrb.com) documentation)
+    - optional
 * `_layouts`
     - directory for one or more layout pages which are used as templates when processing the Markdown or HTML files
     - the corresponding layout is selected in the page's YAML header
     - layout contain a mix of HTML and _Liquid_ instructions
-    - the Progenetix template uses a single `default.html` template
+    - the Progenetix template project uses a single `default.html` template file
 * `_site`
     - a directory generated when locally serving the site; can be ignored (except for debugging)
     - should be added to  `.gitignore`
@@ -57,6 +59,15 @@ Generally, "_underscore" directories contain specific support files are not eval
 * `tags`
     - as for `categories`
 * `pages`
-    - the root directory for adding "collections" of Markdown (or HTML) files to be processed for the website
-    - directories inside have to be registered as "collections" in `_config.yml` (see there), but with a leading "_" for the directory
-    - the `/pages/_posts/` directory is special, in that it requires date-prefixed page nemes (`2019-03-14-the-weather-today.md`)
+    - the root directory for directly adding pages or "collections" of Markdown (or HTML) files, to be processed for the website
+    - directories inside have to be registered as "collections" in `_config.yml` (see there), but with a leading "\_" for the directory
+    - the `/pages/_posts/` directory is special, in that it requires date-prefixed page names (`2019-03-14-the-weather-today.md`)
+    
+    #### Additional root directories
+    
+    One can add any number of directories to the project root. Their behaviour in the context of the website depends on naming and content:
+    
+    * Any `_underscore` directory will be ignored, if it is not one of the special cases described below. It will *not* be copied to the website. A typical case would be to use a `_drafts` directory.
+    * Standard `directory-name` directories will be copied top the website's root. Markdown files in them will *not* be interpreted by the Jekyll parser, even if having a YAML header. 
+    * However, standard directories specified in the `include` directive in `_config.yml` will be interpreted, though it is a good practice to limit those to the `tags` and `categories` directories, which contain the respective listing pages.
+    
