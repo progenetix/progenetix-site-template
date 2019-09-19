@@ -65,7 +65,7 @@ Generally, "_underscore" directories contain specific support files are not eval
     
     #### Additional root directories
     
-    One can add any number of directories to the project root. There behaviour in the context of the website depends on naming and content:
+    One can add any number of directories to the project root. Their behaviour in the context of the website depends on naming and content:
     
     * Any `_underscore` directory will be ignored, if it is not one of the special cases described below. It will *not* be copied to the website. A typical case would be to use a `_drafts` directory.
     * Standard `directory-name` directories will be copied top the website's root. Markdown files in them will *not* be interpreted by the Jekyll parser, even if having a YAML header. 
