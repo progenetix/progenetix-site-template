@@ -48,7 +48,7 @@ jekyll build
 ```
 ... to generate the html file structure, or 
 ```bash
-jekyll serve --incremental
+bundle exec jekyll serve --incremental
 ```
 ... to run a server. Which should then answer with (more stuff) and
 
@@ -60,7 +60,7 @@ Server address: http://127.0.0.1:4000
 
 * If you have a non-empty `baseurl` parameter in your `_config.yml` (e.g. the name og the repository you are running the site from), you will have to specify an empty `baseurl` when starting your localhost test server:
 ```bash
-jekyll serve --baseurl "" --incremental
+bundle exec jekyll serve --baseurl "" --incremental
 ```
 * On OS X with homebrew there is (was? OS X 10.13) a configuration problem when building the "nokogiri" component. A workaround is to de-install "xz", and run the install again (thanks to the comments by _halostatue_ on [Github nokogiri](https://github.com/sparklemotion/nokogiri/issues/1483)!).
 ```bash
