@@ -8,6 +8,7 @@ excerpt_link: https://progenetix.github.io/progenetix-site-template/howto/jekyll
 excerpt_separator: <!--more-->
 category:
   - howto
+  - index
 tags:
   - Jekyll
   - documentation
