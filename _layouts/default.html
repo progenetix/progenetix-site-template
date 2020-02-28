@@ -15,13 +15,13 @@
 {%- endcomment -%}
   <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
 {%- for static_file in site.static_files -%}
-	{%- if static_file.path contains '/preload/' -%}
-		{% if static_file.extname contains 'css' %}
+  {%- if static_file.path contains '/preload/' -%}
+    {% if static_file.extname contains 'css' %}
   <link rel="stylesheet" href="{{ static_file.path | relative_url }}">
-		{% elsif static_file.extname contains 'js' %}
-	<script src="{{ static_file.path | relative_url }}"></script>
-		{%- endif -%}
-	{%- endif -%}
+    {% elsif static_file.extname contains 'js' %}
+  <script src="{{ static_file.path | relative_url }}"></script>
+    {%- endif -%}
+  {%- endif -%}
 {%- endfor -%}
 
 </head>
@@ -45,10 +45,10 @@
 
   <div id="sitelogo">
 <a href="{{ '/' | relative_url }}">
-		<h2>{{ site.label }}</h2>
-  	<div style="font-size: 0.9em; margin-top: -10px; margin-bottom: 15px;">{{ site.tagline }}</div>
+    <h2>{{ site.label }}</h2>
+    <div style="font-size: 0.9em; margin-top: -10px; margin-bottom: 15px;">{{ site.tagline }}</div>
 </a>
-	</div>
+  </div>
 
   <div id="catlinks">
 
@@ -57,7 +57,7 @@
   * those are contained in nav_cat_blocks
 {%- endcomment -%}
 
-{%- assign nav_itemno = 5 -%}
+{%- assign nav_itemno = 2 -%}
 {%- if site.navigation_max_items -%}
   {%- assign nav_itemno = site.navigation_max_items -%}
 {%- endif -%}
@@ -83,7 +83,7 @@
       {%- assign cat_page = cat_key | append: '.html' -%}
       {%- assign cat_posts = site.documents | where: 'categories', cat_key | sort: 'date' | reverse -%}
 
-			{%- if cat_posts.size >= 1 -%}
+      {%- if cat_posts.size >= 1 -%}
 
   <h4><a href="{{ 'categories' | relative_url }}/{{cat_page}}">{{ cat_label }}</a></h4>
         
@@ -95,59 +95,59 @@
     differ in their name (=> category)
 {%- endcomment -%}
 
-				{%- if site.categories-date-sorted contains cat_key -%}
-					{%- assign this_name = page.name | split: "." -%}
-					{%- if page.categories contains cat_key or this_name[0] == cat_key -%}
+        {%- if site.categories-date-sorted contains cat_key -%}
+          {%- assign this_name = page.name | split: "." -%}
+          {%- if page.categories contains cat_key or this_name[0] == cat_key -%}
 
 {%- comment -%}
   * first featured posts
   * those are subtracted from the nav_itemno count ...
 {%- endcomment -%}
 
-						{%- for post in cat_posts -%}{%- if post.tags contains '.featured' -%}
-							{%- assign post_link = post.url | relative_url -%}
-							{%- assign post_label = post.title -%}
-							{%- if post.excerpt_link contains 'http://' or post.excerpt_link contains 'https://' -%}
-								{%- assign post_link = post.excerpt_link -%}
-								{%- assign post_label = post_label | append: ' &#8599;' -%}
-							{%- endif -%}
+            {%- for post in cat_posts -%}{%- if post.tags contains '.featured' -%}
+              {%- assign post_link = post.url | relative_url -%}
+              {%- assign post_label = post.title -%}
+              {%- if post.excerpt_link contains 'http://' or post.excerpt_link contains 'https://' -%}
+                {%- assign post_link = post.excerpt_link -%}
+                {%- assign post_label = post_label | append: ' &#8599;' -%}
+              {%- endif -%}
 
     <h4 class="sublink">
       <a href="{{ post_link }}">{{ post_label }}</a>
     </h4>
-							{%- assign nav_itemno = nav_itemno | minus: 1 -%}
-						{%- endif -%}{%- endfor -%}
-						{%- for post in cat_posts limit: nav_itemno -%}{%- unless post.tags contains '.featured' or post.tags contains '.prepend' or post.tags contains '.append' -%}
+              {%- assign nav_itemno = nav_itemno | minus: 1 -%}
+            {%- endif -%}{%- endfor -%}
+            {%- for post in cat_posts limit: nav_itemno -%}{%- unless post.tags contains '.featured' or post.tags contains '.prepend' or post.tags contains '.append' -%}
 
 {%- comment -%}
   * others than the featured posts
 {%- endcomment -%}
 
-							{%- assign post_link = post.url | relative_url -%}
-							{%- assign post_label = post.title -%}
-							{%- if post.excerpt_link contains 'http://' or post.excerpt_link contains 'https://' -%}
-								{%- assign post_link = post.excerpt_link -%}
-								{%- assign post_label = post_label | append: ' &#8599;' -%}
-							{%- endif -%}
+              {%- assign post_link = post.url | relative_url -%}
+              {%- assign post_label = post.title -%}
+              {%- if post.excerpt_link contains 'http://' or post.excerpt_link contains 'https://' -%}
+                {%- assign post_link = post.excerpt_link -%}
+                {%- assign post_label = post_label | append: ' &#8599;' -%}
+              {%- endif -%}
     <h4 class="sublink">
       <a href="{{ post_link }}">{{ post_label }}</a>
     </h4>
  
-						{%- endunless -%}{%- endfor -%}
-						
+            {%- endunless -%}{%- endfor -%}
+            
 {%- comment -%}
   * link to the category collecting page, if more than nav_itemno
 {%- endcomment -%}
 
-						{%- if cat_posts.size > nav_itemno -%}
+            {%- if cat_posts.size > nav_itemno -%}
 
     <h4 class="sublink" >
       <a href="{{ 'categories' | relative_url }}/{{cat_page}}">all ...</a>
     </h4>
 
-						{%- endif -%}
-					{%- endif -%}
-				{%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
   {%- endif -%}
@@ -190,7 +190,7 @@
   * begin of tags
 {%- endcomment -%}
 
-	</div>
+  </div>
 
   <div id="tagcloud">
 
@@ -316,11 +316,11 @@
 {%- endif -%}
 
 {%- for static_file in site.static_files -%}
-	{% if static_file.path contains 'site-specific/site-logo-main.png' %}
+  {% if static_file.path contains 'site-specific/site-logo-main.png' %}
   <a href="{{ site.site_parent_link }}">
     <img style="margin-top:15px; margin-left: auto; margin-right: auto;" src="{{ 'assets' | relative_url }}/img/site-specific/site-logo-main.png" />
   </a>
-	{% endif %}
+  {% endif %}
 {%- endfor -%}
 
 </footer>
@@ -338,7 +338,7 @@
 {%- endcomment -%}
 
 {%- unless page.path contains 'categories/' or page.path contains 'tags/' or page.path contains 'generated' -%}  
-	{%- if site.github.repository_url contains '/' -%}
+  {%- if site.github.repository_url contains '/' -%}
     {%- assign github_link = site.github.repository_url | append: '/blob/master/' -%}
     {%- if page.path contains '/' -%}
       {%- unless page.path contains site.collections_dir -%}
@@ -346,7 +346,7 @@
       {%- endunless -%}
     {%- endif -%}
   <a href="{{github_link}}{{page.path}}" style="text-decoration: none; color: #ccc;"><img src="{{ 'assets/img/icons8-edit-file-26.png' | relative_url }}" alt="Edit on Github..." id="pageediticn" /></a>
-	{%- elsif site.source_path contains '/' -%}
+  {%- elsif site.source_path contains '/' -%}
 
 <!-- Code from https://clipboardjs.com -->
   <button  id="pageediticn" data-clipboard-text="open {{site.source_path}}/{{ page.path }}">
@@ -363,7 +363,7 @@
 </script>
 <!-- / clipboardjs -->
 
-	{%- endif -%}
+  {%- endif -%}
 {%- endunless -%}
 
 {%- comment -%}

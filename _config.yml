@@ -104,5 +104,5 @@ type: website
 show_downloads: true
 future: true
 safe: false
-navigation_max_items: 4 # displayed sidebar links in current category
+navigation_max_items: 3 # displayed sidebar links in current category
 emptyArray: []          # dummy element for array instantiation
