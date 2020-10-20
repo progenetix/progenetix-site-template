@@ -14,6 +14,7 @@ tags:
   - documentation
   - website
   - FAQ
+  - .featured
 ---
 
 ## Local Jekyll based website generation
@@ -47,7 +48,7 @@ From this site directory, you issue:
 ```bash
 jekyll build
 ```
-... to generate the html file structure, or 
+... to generate the html file structure, or
 ```bash
 bundle exec jekyll serve --incremental
 ```
