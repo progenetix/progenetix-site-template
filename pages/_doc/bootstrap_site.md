@@ -1,11 +1,12 @@
 ---
 title: "bootstrap_site.pl: Generate listing pages"
 layout: default
-www_link: 
+www_link:
 excerpt_separator: <!--more-->
 date: 2019-07-10
 category:
   - howto
+  - index
 tags:
   - Perl
   - ProgenetixTemplate
@@ -16,7 +17,7 @@ tags:
 
 ## {{ page.title }}
 
-The bootstrap_site is a utility for creating the structure of __Progenetix 
+The bootstrap_site is a utility for creating the structure of __Progenetix
 Jekyll Website Template__ based websites.
 
 <!--more-->
@@ -42,7 +43,3 @@ will be generated:
 * with the argument `-update y`, users will be prompted if they want to download
 the newest `style.css` and `layout.css` files from the "Progenetix :: Template"
 repository - this will overwrite the existing files!
-
-
-
-

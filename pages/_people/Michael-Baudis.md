@@ -2,7 +2,8 @@
 title: "Michael Baudis"
 layout: default
 excerpt_separator: <!--more-->
-image_file: 'mbaudis.jpg'
+excerpt_link: https://info.baudisgroup.org/group/Michael_Baudis/
+image_file: 'mbaudis.png'
 author: mbaudis
 categories:
   - people
@@ -37,4 +38,3 @@ email [mbaudis@progenetix.org](mailto:mbaudis@progenetix.org)
 web [UZH](https://www.imls.uzh.ch/en/research/baudis.html)  
 web [SIB](https://www.sib.swiss/michael-baudis-group)  
 web [group](https://info.baudisgroup.org)  
-
