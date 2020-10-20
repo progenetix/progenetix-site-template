@@ -14,6 +14,7 @@ tags:
   - website
   - FAQ
   - scripts
+  - .featured
 ---
 
 <!--
