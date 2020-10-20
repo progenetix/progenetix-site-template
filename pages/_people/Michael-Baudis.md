@@ -29,8 +29,6 @@ tags:
 Professor of Bioinformatics  
 University of Zurich  
 Swiss Institute of Bioinformatics  
-Co-chair GA4GH Discovery  
-Co-chair ELIXIR Beacon  
 
 <!--more-->
 
