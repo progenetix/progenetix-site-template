@@ -8,16 +8,16 @@ category:
   - howto
   - index
 tags:
-  - Perl
-  - ProgenetixTemplate
-  - code
+  - Jekyll
   - documentation
+  - website
+  - FAQ
   - .featured
 ---
 
 ## {{ page.title }}
 
-The bootstrap_site is a utility for creating the structure of __Progenetix
+`bootstrap_site.pl` is a utility for creating the structure of __Progenetix
 Jekyll Website Template__ based websites.
 
 <!--more-->
