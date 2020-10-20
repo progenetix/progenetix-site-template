@@ -11,6 +11,7 @@ tags:
   - ProgenetixTemplate
   - code
   - documentation
+  - .featured
 ---
 
 ## {{ page.title }}
