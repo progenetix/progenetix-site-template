@@ -25,9 +25,8 @@ A typical application here would be to have the root directory as a Github proje
 
 * [schemablocks.org](http://schemablocks.org)
 * [ELIXIR Beacon](http://beacon-project.io)
-* [GA4GH Metadata](http://ga4gh-metadata.github.io)
-* [GA4GH Discovery](http://ga4gh-discovery.github.io)
 * [ELIXIR Cloud and AAI](https://elixir-europe.github.io/cloud/)
+* [GA4GH Discovery](http://ga4gh-discovery.github.io)
 * [CompbioZurich](https://compbiozurich.org)
 * ...
 
@@ -66,7 +65,7 @@ Below this will page excerpts for pages with the "index" category appear.
 
 {% comment %}
 ################################################################################
-	Please keep this for an HTML break...	
+	Please keep this for an HTML break...
 ################################################################################
 {% endcomment %}
 
@@ -83,7 +82,7 @@ Below this will page excerpts for pages with the "index" category appear.
 {%- endcomment -%}
 
 {%- for post in cat_posts -%}
-  {% unless post.tags contains '.prepend' or post.tags contains '.append' %} 
+  {% unless post.tags contains '.prepend' or post.tags contains '.append' %}
     {%- assign post_author = post.author | downcase -%}
     {%- assign excerpt_link = post.url | relative_url -%}
     {%- if post.excerpt_link contains '/' -%}
