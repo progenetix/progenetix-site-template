@@ -16,8 +16,8 @@ url: 'https://progenetix.github.io/progenetix-site-template'
 # The baseurl parameter is an empty string if the site is represented at the root
 # of a domain:
 # * For project domains on Github it corresponds to the project name.
-# * If running the server locally for testing purposes, one has to provide an 
-#   empty string (--baseurl "") as command line parameter, if a different value 
+# * If running the server locally for testing purposes, one has to provide an
+#   empty string (--baseurl "") as command line parameter, if a different value
 #   is being provided here.
 baseurl: "/progenetix-site-template"
 
@@ -52,19 +52,22 @@ nav_cat_blocks:     # comma-separated "label,type,label_visibility"
 
 # content of the different navigation blocks
 
-# The `general` block is of type "categories" (defined above in `nav_cat_blocks`); i.e. 
-# the attributes there reflect Jekyll site `categories` as specified in the pages' YAML 
+# The `general` block is of type "categories" (defined above in `nav_cat_blocks`); i.e.
+# the attributes there reflect Jekyll site `categories` as specified in the pages' YAML
 # headers.
-general:
+General:
   news: News
   people: Participants
   howto: 'Examples, Guides & FAQ'
   minutes: 'Meeting minutes'
   contact: Contacts
 
+# links added to the "General" categories block
+general_outlinks:
+  'Progenetix Resource': 'http://progenetix.org'
+
 related_sites:
   'Baudisgroup at UZH': 'http://info.baudisgroup.org'
-  'Progenetix': 'http://progenetix.org'
   'SchemaBlocks': 'http://schemablocks.org'
 
 github_projects:

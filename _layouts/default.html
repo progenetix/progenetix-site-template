@@ -152,6 +152,14 @@
     {%- endfor -%}
   {%- endif -%}
 
+  {%- if block_label_type[0] == 'General' -%}
+    {%- for this_link in site.general_outlinks -%}
+    <h4>
+      <a href="{{this_link[1]}}">{{this_link[0]}}</a>
+    </h4>
+    {%- endfor -%}
+  {%- endif -%}
+
   </div>
 
 {%- comment -%}
