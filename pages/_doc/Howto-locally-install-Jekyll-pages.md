@@ -46,7 +46,7 @@ bundle install
 From this site directory, you issue:
 
 ```bash
-jekyll build
+bundle exec jekyll build
 ```
 ... to generate the html file structure, or
 ```bash
@@ -70,5 +70,6 @@ brew uninstall --ignore-dependencies --force xz
 sudo gem install github-pages
 brew install xz
 ```
+* An incompatibility of `listen` lead to failing execution under Ruby 3. This has been fixed in the latest versions of `listen`, but you have to update this directly via `bundle update` or `bundle update listen`.
 
 Please see the [Jekyll](https://jekyllrb.com) documentation for more options (e.g. how to generate your site into a specific target directory).
