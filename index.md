@@ -36,6 +36,11 @@ Alternatively, the site can be build locally (requiring some Ruby gems etc.), fo
 * [internal.baudisgroup.org](http://internal.baudisgroup.org) (internal access only)
 * [info.progenetix.org](http://info.progenetix.org) - Progenetix info page
 
+#### External Information
+
+* A nice [introduction into Github + Jekyll website management](https://carpentries-incubator.github.io/jekyll-pages-novice/) at _carpentries_, by Toby Hodges
+
+
 ----
 
 {% comment %}
