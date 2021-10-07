@@ -258,11 +258,12 @@
   {%- if page.pdf_file_name -%}
     {%- for this_file in site.static_files -%}
       {% if this_file.name == page.pdf_file_name %}
-        <li><a href="{{this_file.path}}" target="_blank">[PDF]</a>
+      <li><a href="{{site.baseurl}}{{this_file.path}}" target="_blank">[PDF]</a>
         {% if page.pdf_file_type %}
-   ({{ page.pdf_file_type }})
+ ({{ page.pdf_file_type }})
         {% endif %}
-      {% endif %}</li>
+      </li>
+      {% endif %}
     {%- endfor -%}
   {%- endif -%}
   {% if page.www_link %}
@@ -274,6 +275,7 @@
     {% endfor %}
   {%- endif -%}
     </ul>
+
 {%- endif -%}
 
 {%- comment -%}
